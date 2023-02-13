@@ -16,10 +16,11 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(name, price, category){
+  let menuItem = {name, price, category};
+  return menuItem;
 }
-
+console.log(createMenuItem("tacos", 8, "Lunch"))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -32,6 +33,10 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+
+console.log(createMenuItem("pizza", 10, "Lunch"));
+console.log(createMenuItem("sushi", 7, "Lunch"));
+console.log(createMenuItem("steak", 20, "Dinner"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,10 +56,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
 }
 
+burger.discount = function(string){
+  if (string === "teacher" || string === "student") {
+    return burger.price = 13.5
+  }
+  else {
+    return burger.price = 16.2
+  }
 
+}
+console.log(burger.discount("teacher"))
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
